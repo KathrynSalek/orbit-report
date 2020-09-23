@@ -1,3 +1,4 @@
+/* Copy the entire contents of the example orbit-list-component.css and put it into your orbit-list-component.css. Leave the sortable class alone, but change the table and warning styles to colors and sizes you find pleasing. */
 .sortable {
   cursor: pointer;
   color: #dd5;

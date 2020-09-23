@@ -1,9 +1,8 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<app-orbit-list [satellites]="displayList"></app-orbit-list>
+<app-orbit-list [satellites]="displayList"></app-orbit-list> <!--Pass in the displayList to the orbit-list-component.-->
 
-<div class="search-form">
-  <input #searchTerm (keyup.enter)='search(searchTerm.value)' placeholder="Enter your search term here:"/>
-  <button (click) = "search(searchTerm.value)">Search</button>
+<div class="search-form"> <!-- Add this HTML <div class="search-form"></div> in app.component.html.-->
+  <input #searchTerm (keyup.enter)='search(searchTerm.value)' placeholder="Enter your search term here:"/> <!--Add an <input> element inside the <div>.  Add an Angular (keyup.enter) handler to the <input> tag that calls search(searchTerm.value).-->
+  <button (click) = "search(searchTerm.value)">Search</button> <!--Add a <button> element inside the <div>.  Add an Angular (click) handler to the <button> that also calls search(searchTerm.value).-->
 </div>
 
 <app-orbit-counts [satellites]="displayList"></app-orbit-counts>

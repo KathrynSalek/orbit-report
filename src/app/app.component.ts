@@ -11,11 +11,11 @@ import { Satellite } from './satellite';
 export class AppComponent {
   title = 'orbit-report';
   sourceList: Satellite[];
-  displayList: Satellite[];
+  displayList: Satellite[]; // Add the displayList: Satellite[]; property to the AppComponent class.
 
   constructor() {
     this.sourceList = [];
-    this.displayList = [];
+    this.displayList = []; // Set displayList = [] in the constructor
     let satellitesUrl = 'https://handlers.education.launchcode.org/static/satellites.json';
 
     window.fetch(satellitesUrl).then(function(response) {
@@ -28,10 +28,10 @@ export class AppComponent {
           }
         // make a copy of the sourceList to be shown to the user
       this.displayList = this.sourceList.slice(0);
-    }.bind(this));
+    }.bind(this)); // these bind statements are crucial for this.sourceList.push(satellite) to work properly.
  }.bind(this));
 }
-    search(searchTerm: string): void {
+    search(searchTerm: string): void { // Add a search method to the AppComponent class.
       let matchingSatellites: Satellite[] = [];
       searchTerm = searchTerm.toLowerCase();
       for(let i=0; i < this.sourceList.length; i++) {
